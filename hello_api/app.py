@@ -12,6 +12,12 @@ app = Flask(__name__)
 
 
 @app.route('/api/hello', methods=['GET'])
+def welcome():
+    """Default endpoint"""
+    return("Hello, there. Are you using the correct endpoint? 🤗")
+
+
+@app.route('/api/hello', methods=['GET'])
 def hello():
     """
     Returns weather condition based on the user's IP address
